@@ -1,0 +1,15 @@
+Package: HCPtools
+Type: Package
+Title: Tools for using the HCP Rest API
+Version: 1.0
+Date: 2014-08-31
+Author: Craig Parman
+Maintainer: Craig Parman <craig.parman@hds.com>
+Description: The package provides funtions for uploading, downloading and
+    annotating data on The Hitachi Content Platform
+License: GPL-2 | GPL-3
+Imports:
+    digest,base64enc,RCurl,XML
+Suggests:
+    tester,
+    testthat

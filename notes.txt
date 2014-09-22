@@ -1,0 +1,5 @@
+Project Notes
+
+1)Functions crash if URL for namespace is not valid
+2)Second level directories not supported? Is with full path
+3)
