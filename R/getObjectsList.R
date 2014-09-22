@@ -9,7 +9,7 @@
 #'@examples
 #'\dontrun{getObjectsList(namespace,auth)}
 #
-
+#small change
 getObjectsList<-function(namespace,auth,verbose=FALSE)
 {
   #get current objects a directory
