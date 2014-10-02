@@ -1,0 +1,2 @@
+auth<-paste("Authorization: HCP ",base64enc::base64encode(charToRaw("s3test")),":",digest::digest("cepcepcep3",algo="md5",serialize=FALSE),sep="" )
+namespace<-"https://s3acl.s3-test.hcp-demo.hcpdomain.com"

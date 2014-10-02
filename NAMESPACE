@@ -3,4 +3,6 @@
 export(authString)
 export(createDir)
 export(deleteDir)
+export(deleteObject)
 export(getObjectsList)
+export(putFile)

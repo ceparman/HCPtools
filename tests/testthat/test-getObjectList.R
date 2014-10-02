@@ -1,8 +1,8 @@
-context("Test forgetting list of objects from exixting namespace, ")
+context("Test for getting list of objects from existing namespace, ")
+
 test_that("Returns object list",
           {
-          auth<-paste("Authorization: HCP ",base64enc::base64encode(charToRaw("s3test")),":",digest::digest("cepcepcep3",algo="md5",serialize=FALSE),sep="" )
-          namespace<-"https://s3acl.s3-test.hcp-demo.hcpdomain.com"
+          source("testAuth.R")
           
           result<-getObjectsList(namespace,auth)     
           expect_that(result[1], equals(".lost%2bfound"))
@@ -11,9 +11,8 @@ test_that("Returns object list",
 
 test_that("Returns return error with wrong password",
 {
-  auth<-paste("Authorization: HCP ",base64enc::base64encode(charToRaw("s3test")),":",digest::digest("cepcepcep",algo="md5",serialize=FALSE),sep="" )
-  namespace<-"https://s3acl.s3-test.hcp-demo.hcpdomain.com"
-  
+  source("testAuth.R")
+  auth<-paste("Authorization: HCP ",base64enc::base64encode(charToRaw("testuser")),":",digest::digest("mypasswor",algo="md5",serialize=FALSE),sep="" )
   result<-getObjectsList(namespace,auth)     
   expect_that(result, equals("Error HTTP/1.1 403 Forbidden"))
 
