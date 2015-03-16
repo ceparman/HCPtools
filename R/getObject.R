@@ -21,7 +21,7 @@ getObject<-function(objectName,saveName,namespace,auth,compress=FALSE,validate=T
   
   if(compress){
   
-    RCurl::curlPerform(url =paste(namespace,"/rest/",objectName,sep=""),
+    RCurl::curlPerform(url = paste(namespace,"/rest/",objectName,sep=""),
               httpheader = auth, 
               writedata = f@ref,   
               ssl.verifyhost = FALSE,
@@ -69,7 +69,7 @@ getObject<-function(objectName,saveName,namespace,auth,compress=FALSE,validate=T
 }
 
 
-getObject("IMG_20140629_181735.jpg","temp.jpg",namespace,auth,compress=TRUE,validate=TRUE,verbose=TRUE)
+#getObject("IMG_20140629_181735.jpg","temp.jpg",namespace,auth,compress=TRUE,validate=TRUE,verbose=TRUE)
 
 
 

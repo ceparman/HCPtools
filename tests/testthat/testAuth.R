@@ -1,2 +1,16 @@
-auth<-paste("Authorization: HCP ",base64enc::base64encode(charToRaw("s3test")),":",digest::digest("cepcepcep3",algo="md5",serialize=FALSE),sep="" )
-namespace<-"https://s3acl.s3-test.hcp-demo.hcpdomain.com"
+
+if(file.exists("testfiles/cred"))
+  { load("testfiles/cred")
+  
+  } else
+  {
+
+     
+  credentials<-list(user=readline("enter user?"),pass=readline("enter password"))
+
+  }
+
+auth<-paste("Authorization: HCP ",base64enc::base64encode(charToRaw(credentials[["user"]])),":"
+            ,digest::digest(credentials[["pass"]],algo="md5",serialize=FALSE),sep="" )
+
+namespace<-"http://Rtest.parman.hcpdemo.gssd.hds.com"

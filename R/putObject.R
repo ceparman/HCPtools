@@ -1,5 +1,5 @@
 #'puts a file to HCP
-#'\code{authString} puts a file to a namespace
+#'\code{putFile} puts a file to a namespace
 #'@param filePath path to file to be uploaded
 #'@param filename name for object in namespace
 #'@param namespace namespace to get object list from
