@@ -9,7 +9,7 @@
 #'@examples
 #'\dontrun{getObjectsList(namespace,auth)}
 #
-#small change
+
 getObjectsList<-function(namespace,auth,verbose=FALSE)
 {
   #get current objects a directory
@@ -21,8 +21,8 @@ getObjectsList<-function(namespace,auth,verbose=FALSE)
   curl = RCurl::getCurlHandle()
   RCurl::curlPerform(url = paste(namespace,"/rest",sep=""),
               curl=curl,
-              ssl.verifypeer = FALSE, 
-              ssl.verifyhost = FALSE,
+            #  ssl.verifypeer = FALSE, 
+            #  ssl.verifyhost = FALSE,
               writefunction=h$update,
               headerfunction=k$update,
               httpheader = auth,
@@ -39,3 +39,10 @@ getObjectsList<-function(namespace,auth,verbose=FALSE)
   }
   else return( paste("Error",strsplit(k$value(),"\r")[[1]][1]))
 }
+
+
+#getObjectsList(namespace,auth,verbose=TRUE) 
+
+
+
+
