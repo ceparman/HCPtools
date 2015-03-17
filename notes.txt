@@ -5,3 +5,4 @@ Project Notes
 3)
 4) need to handle encoding option only gzip is allowed otherwise must be missing
 5)need to add content validation to put and get 
+6) Add list2XML fuinctions
