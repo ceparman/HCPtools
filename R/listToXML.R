@@ -6,9 +6,8 @@
 #'@param list object to convert
 #'@return XML object
 #'@export
-#'@examples
-#'\dontrun{listToXML("rootname",list(field1="a",field2="b"))}
-#
+
+
 
 listToXML <- function(rootname, sublist){
   node<- newXMLNode(rootname)

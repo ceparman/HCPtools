@@ -3,7 +3,7 @@
 \name{listToS3XML}
 \alias{listToS3XML}
 \title{Create  XML from a list object for a custom HCP annotation that is comaptable with S3 browers
-\code{listToS3XML} Creates encoded authorization string using base64enc and digest packages}
+\code{listToS3XML} reate  XML from a list object for a custom HCP annotation that is comaptable with S3 browers}
 \usage{
 listToS3XML(sublist)
 }
@@ -14,9 +14,6 @@ listToS3XML(sublist)
 }
 \description{
 Create  XML from a list object for a custom HCP annotation that is comaptable with S3 browers
-\code{listToS3XML} Creates encoded authorization string using base64enc and digest packages
-}
-\examples{
-\dontrun{listToS3XML(list(field1="a",field2="b"))}
+\code{listToS3XML} reate  XML from a list object for a custom HCP annotation that is comaptable with S3 browers
 }
 

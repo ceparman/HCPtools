@@ -21,8 +21,8 @@ getObjectsList<-function(namespace,auth,verbose=FALSE)
   curl = RCurl::getCurlHandle()
   RCurl::curlPerform(url = paste(namespace,"/rest",sep=""),
               curl=curl,
-            #  ssl.verifypeer = FALSE, 
-            #  ssl.verifyhost = FALSE,
+              ssl.verifypeer = FALSE, 
+              ssl.verifyhost = FALSE,
               writefunction=h$update,
               headerfunction=k$update,
               httpheader = auth,
