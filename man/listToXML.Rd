@@ -24,5 +24,7 @@ Create  XML from a list object for a custom HCP annotation
 }
 \examples{
 \dontrun{listToXML("rootname",list(field1="a",field2="b"))}
+\code{listToXML} Creates  XML from a list object for a custom HCP annotation
+\code{authString} Creates encoded authorization string using base64enc and digest packages
 }
 
